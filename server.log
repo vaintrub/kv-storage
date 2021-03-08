@@ -1,0 +1,809 @@
+2021-03-08 22:22:26.560 [14167] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 22:22:26.560 [14167] main/103/server.lua C> log level 5
+2021-03-08 22:22:26.561 [14167] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 22:22:26.561 [14167] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 22:22:26.562 [14167] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 22:22:26.568 [14167] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:22:26.568 [14167] main/103/server.lua I> initializing an empty data directory
+2021-03-08 22:22:26.580 [14167] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:22:26.580 [14167] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 22:22:26.582 [14167] snapshot/101/main I> saving snapshot `./00000000000000000000.snap.inprogress'
+2021-03-08 22:22:26.583 [14167] snapshot/101/main I> done
+2021-03-08 22:22:26.585 [14167] main/103/server.lua I> ready to accept requests
+2021-03-08 22:22:26.585 [14167] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 22:22:26.585 [14167] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:20:09 2021
+2021-03-08 22:22:26.586 [14167] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 22:22:26.587 [14167] main utils.c:1014 E> LuajitError: src/server.lua:23: attempt to index field 'kv_storage' (a nil value)
+2021-03-08 22:22:26.587 [14167] main F> fatal error, exiting the event loop
+2021-03-08 22:23:32.139 [14186] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 22:23:32.141 [14186] main/103/server.lua C> log level 5
+2021-03-08 22:23:32.144 [14186] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 22:23:32.144 [14186] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 22:23:32.145 [14186] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 22:23:32.149 [14186] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:23:32.150 [14186] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 22:23:32.150 [14186] main/103/server.lua I> recovery start
+2021-03-08 22:23:32.150 [14186] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 22:23:32.151 [14186] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 22:23:32.160 [14186] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:23:32.160 [14186] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 22:23:32.161 [14186] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 22:23:32.161 [14186] main/103/server.lua I> ready to accept requests
+2021-03-08 22:23:32.161 [14186] main/103/server.lua C> leaving orphan mode
+2021-03-08 22:23:32.161 [14186] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 22:23:32.161 [14186] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:19:01 2021
+2021-03-08 22:23:32.161 [14186] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 22:23:32.169 [14186] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 22:23:32.169 [14186] main C> entering the event loop
+2021-03-08 22:23:54.128 [14186] main/117/http/127.0.0.1:59835 I> GET /
+2021-03-08 22:23:54.140 [14186] main/118/http/127.0.0.1:59836 I> GET /apple-touch-icon-precomposed.png
+2021-03-08 22:23:54.142 [14186] main/118/http/127.0.0.1:59836 I> GET /apple-touch-icon.png
+2021-03-08 22:23:54.253 [14186] main/117/http/127.0.0.1:59835 I> GET /favicon.ico
+2021-03-08 22:24:00.660 [14186] main/119/http/127.0.0.1:59837 I> GET /
+2021-03-08 22:24:22.788 [14186] main/119/http/127.0.0.1:59837 I> GET /kv
+2021-03-08 22:24:22.982 [14186] main/117/http/127.0.0.1:59835 I> GET /favicon.ico
+2021-03-08 22:27:00.569 [14186] main/120/http/127.0.0.1:59872 I> POST /
+2021-03-08 22:27:00.571 [14186] main/121/http/127.0.0.1:59874 I> POST /
+2021-03-08 22:27:00.573 [14186] main/122/http/127.0.0.1:59876 I> POST /
+2021-03-08 22:27:00.574 [14186] main/123/http/127.0.0.1:59878 I> POST /
+2021-03-08 22:29:52.079 [14186] main/124/http/127.0.0.1:59896 I> POST /kv
+2021-03-08 22:29:52.079 [14186] main/124/http/127.0.0.1:59896 init.lua:173 E> unhandled error: ...-storage-tarantool/.rocks/share/tarantool/http/utils.lua:4: Can not find template for '/kv'
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 22:30:07.876 [14186] main/125/http/127.0.0.1:59898 I> POST /kv
+2021-03-08 22:30:07.876 [14186] main/125/http/127.0.0.1:59898 init.lua:173 E> unhandled error: ...-storage-tarantool/.rocks/share/tarantool/http/utils.lua:4: Can not find template for '/kv'
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 22:47:33.280 [14941] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 22:47:33.280 [14941] main/103/server.lua C> log level 5
+2021-03-08 22:47:33.282 [14941] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 22:47:33.282 [14941] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 22:47:33.283 [14941] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 22:47:33.286 [14941] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:47:33.287 [14941] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 22:47:33.288 [14941] main/103/server.lua I> recovery start
+2021-03-08 22:47:33.288 [14941] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 22:47:33.289 [14941] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 22:47:33.297 [14941] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:47:33.297 [14941] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 22:47:33.297 [14941] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 22:47:33.297 [14941] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 22:47:33.297 [14941] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 22:47:33.298 [14941] main/103/server.lua I> ready to accept requests
+2021-03-08 22:47:33.298 [14941] main/103/server.lua C> leaving orphan mode
+2021-03-08 22:47:33.298 [14941] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 22:47:33.299 [14941] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:26:08 2021
+2021-03-08 22:47:33.299 [14941] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 22:47:33.301 [14941] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 22:47:33.301 [14941] main C> entering the event loop
+2021-03-08 22:47:59.675 [14941] main/117/http/127.0.0.1:60057 I> POST /kv
+2021-03-08 22:47:59.675 [14941] main/117/http/127.0.0.1:60057 init.lua:173 E> unhandled error: ...-storage-tarantool/.rocks/share/tarantool/http/utils.lua:4: Can not find template for '/kv'
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 22:52:35.556 [15095] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 22:52:35.557 [15095] main/103/server.lua C> log level 5
+2021-03-08 22:52:35.559 [15095] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 22:52:35.559 [15095] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 22:52:35.560 [15095] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 22:52:35.564 [15095] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:52:35.565 [15095] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 22:52:35.565 [15095] main/103/server.lua I> recovery start
+2021-03-08 22:52:35.565 [15095] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 22:52:35.567 [15095] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 22:52:35.577 [15095] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:52:35.577 [15095] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 22:52:35.577 [15095] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 22:52:35.577 [15095] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 22:52:35.577 [15095] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 22:52:35.578 [15095] main/103/server.lua I> ready to accept requests
+2021-03-08 22:52:35.578 [15095] main/103/server.lua C> leaving orphan mode
+2021-03-08 22:52:35.578 [15095] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 22:52:35.578 [15095] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:12:38 2021
+2021-03-08 22:52:35.578 [15095] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 22:52:35.580 [15095] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 22:52:35.581 [15095] main C> entering the event loop
+2021-03-08 22:52:48.656 [15095] main/117/http/127.0.0.1:60090 I> POST /kv
+2021-03-08 22:52:48.656 [15095] main/117/http/127.0.0.1:60090 init.lua:173 E> unhandled error: ...-storage-tarantool/.rocks/share/tarantool/http/utils.lua:4: Can not find template for '/kv'
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 22:54:49.946 [15180] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 22:54:49.946 [15180] main/103/server.lua C> log level 5
+2021-03-08 22:54:49.947 [15180] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 22:54:49.947 [15180] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 22:54:49.947 [15180] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 22:54:49.948 [15180] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:54:49.948 [15180] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 22:54:49.948 [15180] main/103/server.lua I> recovery start
+2021-03-08 22:54:49.948 [15180] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 22:54:49.948 [15180] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 22:54:49.954 [15180] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:54:49.955 [15180] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 22:54:49.955 [15180] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 22:54:49.955 [15180] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 22:54:49.955 [15180] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 22:54:49.957 [15180] main/103/server.lua I> ready to accept requests
+2021-03-08 22:54:49.957 [15180] main/103/server.lua C> leaving orphan mode
+2021-03-08 22:54:49.957 [15180] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 22:54:49.957 [15180] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:41:15 2021
+2021-03-08 22:54:49.957 [15180] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 22:54:49.960 [15180] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 22:54:49.960 [15180] main C> entering the event loop
+2021-03-08 22:55:02.986 [15180] main/117/http/127.0.0.1:60099 I> POST /kv
+2021-03-08 22:55:02.986 [15180] main/117/http/127.0.0.1:60099 init.lua:173 E> unhandled error: src/server.lua:40: bad argument #1 to 'decode' (string expected, got table)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 22:57:02.088 [15349] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 22:57:02.089 [15349] main/103/server.lua C> log level 5
+2021-03-08 22:57:02.090 [15349] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 22:57:02.090 [15349] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 22:57:02.091 [15349] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 22:57:02.094 [15349] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:57:02.095 [15349] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 22:57:02.095 [15349] main/103/server.lua I> recovery start
+2021-03-08 22:57:02.095 [15349] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 22:57:02.096 [15349] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 22:57:02.104 [15349] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:57:02.104 [15349] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 22:57:02.105 [15349] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 22:57:02.105 [15349] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 22:57:02.105 [15349] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 22:57:02.106 [15349] main/103/server.lua I> ready to accept requests
+2021-03-08 22:57:02.106 [15349] main/103/server.lua C> leaving orphan mode
+2021-03-08 22:57:02.106 [15349] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 22:57:02.106 [15349] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:15:43 2021
+2021-03-08 22:57:02.106 [15349] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 22:57:02.107 [15349] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 22:57:02.107 [15349] main C> entering the event loop
+2021-03-08 22:57:22.097 [15349] main/117/http/127.0.0.1:60107 I> POST /kv
+2021-03-08 22:57:22.097 [15349] main/117/http/127.0.0.1:60107 init.lua:173 E> unhandled error: src/server.lua:40: bad argument #1 to 'decode' (string expected, got nil)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 22:58:56.641 [15531] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 22:58:56.643 [15531] main/103/server.lua C> log level 5
+2021-03-08 22:58:56.644 [15531] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 22:58:56.644 [15531] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 22:58:56.645 [15531] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 22:58:56.648 [15531] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:58:56.649 [15531] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 22:58:56.649 [15531] main/103/server.lua I> recovery start
+2021-03-08 22:58:56.649 [15531] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 22:58:56.650 [15531] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 22:58:56.658 [15531] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 22:58:56.658 [15531] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 22:58:56.658 [15531] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 22:58:56.658 [15531] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 22:58:56.659 [15531] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 22:58:56.660 [15531] main/103/server.lua I> ready to accept requests
+2021-03-08 22:58:56.660 [15531] main/103/server.lua C> leaving orphan mode
+2021-03-08 22:58:56.660 [15531] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 22:58:56.660 [15531] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:46:37 2021
+2021-03-08 22:58:56.660 [15531] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 22:58:56.661 [15531] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 22:58:56.661 [15531] main C> entering the event loop
+2021-03-08 23:00:23.513 [15531] main/117/http/127.0.0.1:60205 I> POST /kv
+2021-03-08 23:00:23.514 [15531] main/117/http/127.0.0.1:60205 init.lua:173 E> unhandled error: src/server.lua:43: attempt to index local 'body' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:01:16.868 [15680] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:01:16.870 [15680] main/103/server.lua C> log level 5
+2021-03-08 23:01:16.871 [15680] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:01:16.871 [15680] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:01:16.871 [15680] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:01:16.872 [15680] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:01:16.873 [15680] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:01:16.873 [15680] main/103/server.lua I> recovery start
+2021-03-08 23:01:16.873 [15680] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:01:16.873 [15680] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:01:16.880 [15680] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:01:16.880 [15680] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:01:16.880 [15680] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:01:16.880 [15680] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:01:16.881 [15680] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:01:16.881 [15680] main/103/server.lua I> ready to accept requests
+2021-03-08 23:01:16.881 [15680] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:01:16.881 [15680] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:01:16.881 [15680] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:37:24 2021
+2021-03-08 23:01:16.881 [15680] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:01:16.883 [15680] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:01:16.883 [15680] main C> entering the event loop
+2021-03-08 23:01:23.316 [15680] main/117/http/127.0.0.1:60211 I> POST /kv
+2021-03-08 23:01:23.316 [15680] main/117/http/127.0.0.1:60211 init.lua:173 E> unhandled error: src/server.lua:44: attempt to index local 'body' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:07:42.562 [15899] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:07:42.563 [15899] main/103/server.lua C> log level 5
+2021-03-08 23:07:42.564 [15899] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:07:42.564 [15899] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:07:42.565 [15899] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:07:42.568 [15899] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:07:42.569 [15899] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:07:42.569 [15899] main/103/server.lua I> recovery start
+2021-03-08 23:07:42.569 [15899] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:07:42.571 [15899] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:07:42.578 [15899] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:07:42.578 [15899] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:07:42.579 [15899] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:07:42.579 [15899] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:07:42.579 [15899] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:07:42.580 [15899] main/103/server.lua I> ready to accept requests
+2021-03-08 23:07:42.580 [15899] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:07:42.581 [15899] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:07:42.581 [15899] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:05:36 2021
+2021-03-08 23:07:42.581 [15899] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:07:42.583 [15899] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:07:42.583 [15899] main C> entering the event loop
+2021-03-08 23:08:07.144 [15899] main/117/http/127.0.0.1:60301 I> POST /kv
+2021-03-08 23:08:07.145 [15899] main/117/http/127.0.0.1:60301 init.lua:173 E> unhandled error: src/server.lua:43: attempt to index local 'body' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:10:04.485 [15959] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:10:04.486 [15959] main/103/server.lua C> log level 5
+2021-03-08 23:10:04.488 [15959] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:10:04.488 [15959] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:10:04.489 [15959] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:10:04.492 [15959] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:10:04.494 [15959] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:10:04.494 [15959] main/103/server.lua I> recovery start
+2021-03-08 23:10:04.494 [15959] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:10:04.495 [15959] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:10:04.503 [15959] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:10:04.503 [15959] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:10:04.503 [15959] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:10:04.503 [15959] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:10:04.503 [15959] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:10:04.505 [15959] main/103/server.lua I> ready to accept requests
+2021-03-08 23:10:04.505 [15959] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:10:04.505 [15959] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:10:04.505 [15959] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:51:50 2021
+2021-03-08 23:10:04.505 [15959] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:10:04.507 [15959] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:10:04.507 [15959] main C> entering the event loop
+2021-03-08 23:10:08.590 [15959] main/117/http/127.0.0.1:60310 I> POST /kv
+2021-03-08 23:10:08.590 [15959] main/117/http/127.0.0.1:60310 init.lua:173 E> unhandled error: src/server.lua:43: attempt to index local 'body' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:24:45.985 [16034] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:24:45.986 [16034] main/103/server.lua C> log level 5
+2021-03-08 23:24:45.987 [16034] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:24:45.987 [16034] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:24:45.987 [16034] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:24:45.988 [16034] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:24:45.989 [16034] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:24:45.989 [16034] main/103/server.lua I> recovery start
+2021-03-08 23:24:45.989 [16034] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:24:45.989 [16034] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:24:45.997 [16034] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:24:45.997 [16034] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:24:45.997 [16034] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:24:45.997 [16034] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:24:45.997 [16034] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:24:45.998 [16034] main/103/server.lua I> ready to accept requests
+2021-03-08 23:24:45.998 [16034] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:24:45.998 [16034] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:24:45.998 [16034] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:52:26 2021
+2021-03-08 23:24:45.998 [16034] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:24:46.000 [16034] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:24:46.000 [16034] main C> entering the event loop
+2021-03-08 23:24:50.462 [16034] main/117/http/127.0.0.1:60395 I> POST /kv
+2021-03-08 23:24:50.462 [16034] main/117/http/127.0.0.1:60395 init.lua:173 E> unhandled error: src/server.lua:39: attempt to call global 'decode_body_json' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:25:23.952 [16071] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:25:23.953 [16071] main/103/server.lua C> log level 5
+2021-03-08 23:25:23.953 [16071] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:25:23.954 [16071] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:25:23.954 [16071] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:25:23.955 [16071] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:25:23.956 [16071] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:25:23.956 [16071] main/103/server.lua I> recovery start
+2021-03-08 23:25:23.956 [16071] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:25:23.956 [16071] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:25:23.964 [16071] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:25:23.964 [16071] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:25:23.964 [16071] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:25:23.964 [16071] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:25:23.964 [16071] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:25:23.964 [16071] main/103/server.lua I> ready to accept requests
+2021-03-08 23:25:23.965 [16071] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:25:23.965 [16071] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:25:23.965 [16071] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:48:37 2021
+2021-03-08 23:25:23.965 [16071] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:25:23.967 [16071] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:25:23.967 [16071] main C> entering the event loop
+2021-03-08 23:25:26.395 [16071] main/117/http/127.0.0.1:60399 I> POST /kv
+2021-03-08 23:25:26.395 [16071] main/117/http/127.0.0.1:60399 init.lua:173 E> unhandled error: src/server.lua:39: attempt to call global 'decode_body_json' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:26:36.283 [16102] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:26:36.284 [16102] main/103/server.lua C> log level 5
+2021-03-08 23:26:36.285 [16102] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:26:36.285 [16102] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:26:36.286 [16102] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:26:36.288 [16102] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:26:36.289 [16102] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:26:36.290 [16102] main/103/server.lua I> recovery start
+2021-03-08 23:26:36.290 [16102] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:26:36.291 [16102] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:26:36.299 [16102] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:26:36.299 [16102] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:26:36.299 [16102] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:26:36.299 [16102] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:26:36.299 [16102] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:26:36.301 [16102] main/103/server.lua I> ready to accept requests
+2021-03-08 23:26:36.301 [16102] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:26:36.301 [16102] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:26:36.301 [16102] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:22:02 2021
+2021-03-08 23:26:36.301 [16102] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:26:36.303 [16102] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:26:36.303 [16102] main C> entering the event loop
+2021-03-08 23:26:39.011 [16102] main/117/http/127.0.0.1:60406 I> POST /kv
+2021-03-08 23:26:39.011 [16102] main/117/http/127.0.0.1:60406 init.lua:173 E> unhandled error: src/server.lua:39: attempt to call global 'decode_body_json' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:27:23.460 [16133] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:27:23.460 [16133] main/103/server.lua C> log level 5
+2021-03-08 23:27:23.460 [16133] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:27:23.460 [16133] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:27:23.460 [16133] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:27:23.461 [16133] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:27:23.462 [16133] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:27:23.462 [16133] main/103/server.lua I> recovery start
+2021-03-08 23:27:23.462 [16133] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:27:23.462 [16133] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:27:23.468 [16133] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:27:23.468 [16133] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:27:23.469 [16133] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:27:23.469 [16133] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:27:23.469 [16133] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:27:23.471 [16133] main/103/server.lua I> ready to accept requests
+2021-03-08 23:27:23.471 [16133] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:27:23.471 [16133] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:27:23.472 [16133] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:24:52 2021
+2021-03-08 23:27:23.472 [16133] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:27:23.473 [16133] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:27:23.473 [16133] main C> entering the event loop
+2021-03-08 23:27:25.777 [16133] main/117/http/127.0.0.1:60408 I> POST /kv
+2021-03-08 23:27:25.777 [16133] main/117/http/127.0.0.1:60408 init.lua:173 E> unhandled error: src/server.lua:39: attempt to call global 'decode_json' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:28:24.832 [16164] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:28:24.832 [16164] main/103/server.lua C> log level 5
+2021-03-08 23:28:24.833 [16164] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:28:24.833 [16164] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:28:24.833 [16164] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:28:24.834 [16164] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:28:24.835 [16164] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:28:24.835 [16164] main/103/server.lua I> recovery start
+2021-03-08 23:28:24.835 [16164] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:28:24.835 [16164] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:28:24.842 [16164] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:28:24.842 [16164] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:28:24.842 [16164] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:28:24.842 [16164] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:28:24.842 [16164] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:28:24.843 [16164] main/103/server.lua I> ready to accept requests
+2021-03-08 23:28:24.843 [16164] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:28:24.843 [16164] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:28:24.843 [16164] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:04:28 2021
+2021-03-08 23:28:24.843 [16164] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:28:24.844 [16164] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:28:24.844 [16164] main C> entering the event loop
+2021-03-08 23:28:27.966 [16164] main/117/http/127.0.0.1:60417 I> POST /kv
+2021-03-08 23:28:27.966 [16164] main/117/http/127.0.0.1:60417 init.lua:173 E> unhandled error: src/server.lua:53: attempt to call global 'generate_response' (a nil value)
+stack traceback:
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:169: in function 'process_client'
+	...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:348: in function <...ge-tarantool/.rocks/share/tarantool/http/server/init.lua:347>
+	[C]: in function 'pcall'
+	builtin/socket.lua:1081: in function <builtin/socket.lua:1079>
+request:
+POST /kv HTTP/1.1
+HEADER_CONTENT-LENGTH: 11
+HEADER_ACCEPT: */*
+HEADER_CONNECTION: close
+HEADER_CONTENT-TYPE: application/x-www-form-urlencoded
+HEADER_HOST: localhost:8080
+
+2021-03-08 23:29:34.019 [16196] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:29:34.020 [16196] main/103/server.lua C> log level 5
+2021-03-08 23:29:34.021 [16196] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:29:34.021 [16196] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:29:34.021 [16196] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:29:34.022 [16196] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:29:34.023 [16196] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:29:34.023 [16196] main/103/server.lua I> recovery start
+2021-03-08 23:29:34.023 [16196] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:29:34.024 [16196] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:29:34.031 [16196] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:29:34.031 [16196] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:29:34.031 [16196] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:29:34.031 [16196] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:29:34.031 [16196] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:29:34.032 [16196] main/103/server.lua I> ready to accept requests
+2021-03-08 23:29:34.032 [16196] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:29:34.032 [16196] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:29:34.032 [16196] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:23:44 2021
+2021-03-08 23:29:34.032 [16196] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:29:34.033 [16196] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:29:34.033 [16196] main C> entering the event loop
+2021-03-08 23:29:45.431 [16196] main/117/http/127.0.0.1:60422 I> POST /kv
+2021-03-08 23:29:45.432 [16196] main/117/http/127.0.0.1:60422 I> request: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-08 23:30:51.353 [16235] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:30:51.354 [16235] main/103/server.lua C> log level 5
+2021-03-08 23:30:51.354 [16235] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:30:51.354 [16235] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:30:51.354 [16235] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:30:51.356 [16235] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:30:51.356 [16235] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:30:51.357 [16235] main/103/server.lua I> recovery start
+2021-03-08 23:30:51.357 [16235] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:30:51.357 [16235] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:30:51.364 [16235] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:30:51.364 [16235] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:30:51.364 [16235] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:30:51.364 [16235] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:30:51.364 [16235] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:30:51.365 [16235] main/103/server.lua I> ready to accept requests
+2021-03-08 23:30:51.365 [16235] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:30:51.365 [16235] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:30:51.365 [16235] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:43:37 2021
+2021-03-08 23:30:51.365 [16235] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:30:51.366 [16235] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:30:51.366 [16235] main C> entering the event loop
+2021-03-08 23:30:53.360 [16235] main/117/http/127.0.0.1:60427 I> POST /kv
+2021-03-08 23:30:53.360 [16235] main/117/http/127.0.0.1:60427 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-08 23:31:20.409 [16265] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:31:20.410 [16265] main/103/server.lua C> log level 5
+2021-03-08 23:31:20.411 [16265] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:31:20.411 [16265] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:31:20.411 [16265] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:31:20.413 [16265] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:31:20.413 [16265] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:31:20.413 [16265] main/103/server.lua I> recovery start
+2021-03-08 23:31:20.413 [16265] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:31:20.414 [16265] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:31:20.421 [16265] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:31:20.421 [16265] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:31:20.421 [16265] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:31:20.421 [16265] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:31:20.421 [16265] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:31:20.422 [16265] main/103/server.lua I> ready to accept requests
+2021-03-08 23:31:20.422 [16265] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:31:20.422 [16265] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:31:20.422 [16265] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:10:08 2021
+2021-03-08 23:31:20.422 [16265] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:31:20.423 [16265] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:31:20.423 [16265] main C> entering the event loop
+2021-03-08 23:31:23.574 [16265] main/117/http/127.0.0.1:60429 I> POST /kv
+2021-03-08 23:31:23.574 [16265] main/117/http/127.0.0.1:60429 I> REQUEST: status - false body - src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-08 23:32:47.971 [16323] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:32:47.972 [16323] main/103/server.lua C> log level 5
+2021-03-08 23:32:47.973 [16323] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:32:47.973 [16323] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:32:47.974 [16323] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:32:47.978 [16323] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:32:47.979 [16323] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:32:47.979 [16323] main/103/server.lua I> recovery start
+2021-03-08 23:32:47.979 [16323] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:32:47.980 [16323] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:32:47.990 [16323] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:32:47.991 [16323] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:32:47.991 [16323] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:32:47.991 [16323] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:32:47.991 [16323] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:32:47.992 [16323] main/103/server.lua I> ready to accept requests
+2021-03-08 23:32:47.992 [16323] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:32:47.992 [16323] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:32:47.993 [16323] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 00:43:53 2021
+2021-03-08 23:32:47.993 [16323] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:32:47.994 [16323] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:32:47.994 [16323] main C> entering the event loop
+2021-03-08 23:33:01.568 [16323] main/117/http/127.0.0.1:60457 I> GET /
+2021-03-08 23:33:01.950 [16323] main/118/http/127.0.0.1:60459 I> GET /favicon.ico
+2021-03-08 23:33:11.302 [16323] main/118/http/127.0.0.1:60459 I> GET /
+2021-03-08 23:33:12.993 [16323] main/117/http/127.0.0.1:60457 I> GET /kv
+2021-03-08 23:33:13.065 [16323] main/118/http/127.0.0.1:60459 I> GET /favicon.ico
+2021-03-08 23:33:25.053 [16323] main/117/http/127.0.0.1:60457 I> GET /kv
+2021-03-08 23:39:18.141 [16323] main/119/http/127.0.0.1:60554 I> GET /kv?key=22,value=3
+2021-03-08 23:39:18.288 [16323] main/120/http/127.0.0.1:60557 I> GET /favicon.ico
+2021-03-08 23:39:30.859 [16323] main/119/http/127.0.0.1:60554 I> GET /kv?key=22,value=3
+2021-03-08 23:49:57.329 [16323] main/121/http/127.0.0.1:60701 I> POST /kv
+2021-03-08 23:49:57.329 [16323] main/121/http/127.0.0.1:60701 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-08 23:55:03.013 [16323] main/122/http/127.0.0.1:60724 I> POST /kv
+2021-03-08 23:55:03.013 [16323] main/122/http/127.0.0.1:60724 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-08 23:59:19.286 [16715] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-08 23:59:19.288 [16715] main/103/server.lua C> log level 5
+2021-03-08 23:59:19.289 [16715] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-08 23:59:19.289 [16715] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-08 23:59:19.289 [16715] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-08 23:59:19.290 [16715] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:59:19.290 [16715] main/103/server.lua I> instance vclock {1: 3}
+2021-03-08 23:59:19.291 [16715] main/103/server.lua I> recovery start
+2021-03-08 23:59:19.291 [16715] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-08 23:59:19.291 [16715] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-08 23:59:19.298 [16715] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-08 23:59:19.298 [16715] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-08 23:59:19.299 [16715] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-08 23:59:19.299 [16715] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-08 23:59:19.299 [16715] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-08 23:59:19.299 [16715] main/103/server.lua I> ready to accept requests
+2021-03-08 23:59:19.300 [16715] main/103/server.lua C> leaving orphan mode
+2021-03-08 23:59:19.300 [16715] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-08 23:59:19.300 [16715] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:45:48 2021
+2021-03-08 23:59:19.300 [16715] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-08 23:59:19.302 [16715] main/116/http/127.0.0.1:8080 I> started
+2021-03-08 23:59:19.302 [16715] main C> entering the event loop
+2021-03-09 00:00:25.972 [16753] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-09 00:00:25.973 [16753] main/103/server.lua C> log level 5
+2021-03-09 00:00:25.974 [16753] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-09 00:00:25.974 [16753] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-09 00:00:25.974 [16753] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-09 00:00:25.976 [16753] main/103/server.lua box.cc:2984 E> ER_ALREADY_RUNNING: Failed to lock WAL directory . and hot_standby mode is off
+2021-03-09 00:00:25.976 [16753] main/103/server.lua F> can't initialize storage: Failed to lock WAL directory . and hot_standby mode is off
+2021-03-09 00:01:08.660 [16782] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-09 00:01:08.660 [16782] main/103/server.lua C> log level 5
+2021-03-09 00:01:08.661 [16782] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-09 00:01:08.661 [16782] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-09 00:01:08.661 [16782] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-09 00:01:08.662 [16782] main/103/server.lua box.cc:2984 E> ER_ALREADY_RUNNING: Failed to lock WAL directory . and hot_standby mode is off
+2021-03-09 00:01:08.662 [16782] main/103/server.lua F> can't initialize storage: Failed to lock WAL directory . and hot_standby mode is off
+2021-03-09 00:05:04.787 [16873] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-09 00:05:04.788 [16873] main/103/server.lua C> log level 5
+2021-03-09 00:05:04.789 [16873] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-09 00:05:04.789 [16873] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-09 00:05:04.789 [16873] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-09 00:05:04.790 [16873] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:05:04.791 [16873] main/103/server.lua I> instance vclock {1: 3}
+2021-03-09 00:05:04.791 [16873] main/103/server.lua I> recovery start
+2021-03-09 00:05:04.791 [16873] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-09 00:05:04.791 [16873] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-09 00:05:04.799 [16873] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:05:04.799 [16873] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-09 00:05:04.799 [16873] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-09 00:05:04.799 [16873] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-09 00:05:04.799 [16873] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-09 00:05:04.799 [16873] main/103/server.lua I> ready to accept requests
+2021-03-09 00:05:04.799 [16873] main/103/server.lua C> leaving orphan mode
+2021-03-09 00:05:04.800 [16873] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-09 00:05:04.800 [16873] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:43:19 2021
+2021-03-09 00:05:04.800 [16873] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-09 00:05:04.801 [16873] main/116/http/127.0.0.1:8080 I> started
+2021-03-09 00:05:04.801 [16873] main C> entering the event loop
+2021-03-09 00:29:58.069 [16984] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-09 00:29:58.069 [16984] main/103/server.lua C> log level 5
+2021-03-09 00:29:58.071 [16984] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-09 00:29:58.072 [16984] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-09 00:29:58.073 [16984] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-09 00:29:58.078 [16984] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:29:58.079 [16984] main/103/server.lua I> instance vclock {1: 3}
+2021-03-09 00:29:58.080 [16984] main/103/server.lua I> recovery start
+2021-03-09 00:29:58.080 [16984] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-09 00:29:58.081 [16984] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-09 00:29:58.092 [16984] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:29:58.092 [16984] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-09 00:29:58.093 [16984] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-09 00:29:58.093 [16984] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-09 00:29:58.093 [16984] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-09 00:29:58.094 [16984] main/103/server.lua I> ready to accept requests
+2021-03-09 00:29:58.094 [16984] main/103/server.lua C> leaving orphan mode
+2021-03-09 00:29:58.094 [16984] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-09 00:29:58.094 [16984] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 01:33:11 2021
+2021-03-09 00:29:58.094 [16984] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-09 00:29:58.097 [16984] main/116/http/127.0.0.1:8080 I> started
+2021-03-09 00:29:58.097 [16984] main C> entering the event loop
+2021-03-09 00:37:06.391 [16984] main/117/http/127.0.0.1:61082 I> POST /kv/
+2021-03-09 00:37:06.392 [16984] main/117/http/127.0.0.1:61082 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-09 00:44:56.550 [16984] main/118/http/127.0.0.1:61158 I> POST /kv/
+2021-03-09 00:44:56.550 [16984] main/118/http/127.0.0.1:61158 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-09 00:49:17.921 [16984] main/119/http/127.0.0.1:61188 I> POST /kv/
+2021-03-09 00:49:17.921 [16984] main/119/http/127.0.0.1:61188 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-09 00:49:27.461 [17194] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-09 00:49:27.462 [17194] main/103/server.lua C> log level 5
+2021-03-09 00:49:27.463 [17194] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-09 00:49:27.463 [17194] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-09 00:49:27.464 [17194] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-09 00:49:27.465 [17194] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:49:27.465 [17194] main/103/server.lua I> instance vclock {1: 3}
+2021-03-09 00:49:27.466 [17194] main/103/server.lua I> recovery start
+2021-03-09 00:49:27.466 [17194] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-09 00:49:27.466 [17194] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-09 00:49:27.473 [17194] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:49:27.474 [17194] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-09 00:49:27.474 [17194] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-09 00:49:27.474 [17194] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-09 00:49:27.474 [17194] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-09 00:49:27.474 [17194] main/103/server.lua I> ready to accept requests
+2021-03-09 00:49:27.474 [17194] main/103/server.lua C> leaving orphan mode
+2021-03-09 00:49:27.475 [17194] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-09 00:49:27.475 [17194] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 02:08:18 2021
+2021-03-09 00:49:27.475 [17194] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-09 00:49:27.476 [17194] main/116/http/127.0.0.1:8080 I> started
+2021-03-09 00:49:27.476 [17194] main C> entering the event loop
+2021-03-09 00:51:22.642 [17217] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-09 00:51:22.642 [17217] main/103/server.lua C> log level 5
+2021-03-09 00:51:22.643 [17217] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-09 00:51:22.643 [17217] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-09 00:51:22.643 [17217] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-09 00:51:22.645 [17217] main/103/server.lua box.cc:2984 E> ER_ALREADY_RUNNING: Failed to lock WAL directory . and hot_standby mode is off
+2021-03-09 00:51:22.645 [17217] main/103/server.lua F> can't initialize storage: Failed to lock WAL directory . and hot_standby mode is off
+2021-03-09 00:51:26.137 [17194] main/117/http/127.0.0.1:61196 I> POST /kv/
+2021-03-09 00:51:26.137 [17194] main/117/http/127.0.0.1:61196 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-09 00:52:36.378 [17194] main/118/http/127.0.0.1:61199 I> POST /kv/
+2021-03-09 00:52:36.378 [17194] main/118/http/127.0.0.1:61199 I> REQUEST: false src/server.lua:53: attempt to index upvalue 'req' (a nil value)
+2021-03-09 00:52:48.218 [17277] main/103/server.lua C> Tarantool 2.6.2-0-g34d504d
+2021-03-09 00:52:48.218 [17277] main/103/server.lua C> log level 5
+2021-03-09 00:52:48.219 [17277] main/103/server.lua I> mapping 268435456 bytes for memtx tuple arena...
+2021-03-09 00:52:48.219 [17277] main/103/server.lua I> Actual slab_alloc_factor calculated on the basis of desired slab_alloc_factor = 1.044274
+2021-03-09 00:52:48.219 [17277] main/103/server.lua I> mapping 134217728 bytes for vinyl tuple arena...
+2021-03-09 00:52:48.220 [17277] main/103/server.lua I> instance uuid 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:52:48.221 [17277] main/103/server.lua I> instance vclock {1: 3}
+2021-03-09 00:52:48.221 [17277] main/103/server.lua I> recovery start
+2021-03-09 00:52:48.222 [17277] main/103/server.lua I> recovering from `./00000000000000000000.snap'
+2021-03-09 00:52:48.222 [17277] main/103/server.lua I> cluster uuid f1cd3fe5-5b55-4e4e-8b76-20d58bffdc1d
+2021-03-09 00:52:48.229 [17277] main/103/server.lua I> assigned id 1 to replica 71e017f2-0fde-422f-95fa-54ce1bafae0f
+2021-03-09 00:52:48.229 [17277] main/103/server.lua I> recover from `./00000000000000000000.xlog'
+2021-03-09 00:52:48.229 [17277] main/103/server.lua recovery.cc:156 W> file `./00000000000000000000.xlog` wasn't correctly closed
+2021-03-09 00:52:48.229 [17277] main/103/server.lua I> recover from `./00000000000000000003.xlog'
+2021-03-09 00:52:48.229 [17277] main/103/server.lua I> done `./00000000000000000003.xlog'
+2021-03-09 00:52:48.230 [17277] main/103/server.lua I> ready to accept requests
+2021-03-09 00:52:48.230 [17277] main/103/server.lua C> leaving orphan mode
+2021-03-09 00:52:48.230 [17277] main/103/server.lua I> set 'log_level' configuration option to 5
+2021-03-09 00:52:48.230 [17277] main/105/checkpoint_daemon I> scheduled next checkpoint for Tue Mar  9 02:33:19 2021
+2021-03-09 00:52:48.230 [17277] main/103/server.lua I> set 'log_format' configuration option to "plain"
+2021-03-09 00:52:48.232 [17277] main/116/http/127.0.0.1:8080 I> started
+2021-03-09 00:52:48.232 [17277] main C> entering the event loop
+2021-03-09 00:52:51.613 [17277] main/117/http/127.0.0.1:61201 I> POST /kv/
+2021-03-09 00:52:51.613 [17277] main/117/http/127.0.0.1:61201 I> REQUEST: false src/server.lua:54: attempt to index upvalue 'req' (a nil value)
