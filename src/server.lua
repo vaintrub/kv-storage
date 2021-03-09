@@ -11,7 +11,7 @@ if PORT == nil then
 end
 
 box.cfg{
---	log = './server.log'
+	log = './server.log'
 }
 
 box.once('init', 
