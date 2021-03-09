@@ -52,11 +52,6 @@ local function error_resp(req, msg, status_code)
     return resp
 end
 
-local function has_tuple(key)
-    local value = box.space.kv:select({key})
-    return (value ~= nil and next(value) ~= nil)
-end
-
 -- Controllers:
 
 local function create_tuple(req)
@@ -67,10 +62,10 @@ local function create_tuple(req)
     end
 
     local key = body['key']
-	if ( has_tuple(key) ) then
+    local status, err = pcall(function() box.space.kv:insert{ key, body['value'] } end)
+    -- Checking for existing tuple
+    if ( not status ) and ( err:unpack().code == box.error.TUPLE_FOUND ) then
         return error_resp(req, "The key '"..key.."' already exists", 409)
-    else
-        box.space.kv:insert{ key, body['value'] }
 	end
     return {status = 200, body = "OK"}
 end
@@ -83,9 +78,8 @@ local function update_tuple(req)
         return error_resp(req, "Invalid body", 400)
 	end
 
-	if( has_tuple(key)) then
-        box.space.kv:update({key}, {{'=', 2, body['value']}})
-    else
+    local tuple = box.space.kv:update({key}, {{'=', 2, body['value']}})
+    if tuple == nil then
         return error_resp(req, "The key '"..key.."' not found", 404)
 	end
 
@@ -94,23 +88,22 @@ end
 
 local function get_tuple(req)
     local key = req:stash('key')
-
-    local value = box.space.kv:select{ key }
-	if( table.getn( value ) == 0 ) then
+    local tuple = box.space.kv:select{ key }
+	if( table.getn( tuple ) == 0 ) then
         return error_resp(req, "The key '"..key.."' not found", 404)
 	end
 
-    return {status = 200, body = json.encode(unpack(value))}
+    return {status = 200, body = json.encode(unpack(tuple))}
 end
 
 local function delete_tuple(req)
     local key = req:stash('key')
-
-	if( not has_tuple(key) ) then
+	local tuple = box.space.kv:delete{ key }
+    -- Storage vinyl engine always returns nil,
+    -- but my web app doesn't work with it
+	if( tuple == nil ) then
         return error_resp(req, "The key '"..key.."' not found", 404)
 	end
-
-	box.space.kv:delete{ key }
     return {status = 200, body = "OK"}
 end
 

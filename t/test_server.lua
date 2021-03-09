@@ -17,13 +17,16 @@ test:plan(4)
 test:diag("Testing key-value storage")
 
 local testing_data = {
-    key = "some_key4",
-    value = "some_value4"
+    key = "some_key",
+    value = "some_value"
 }
 local test_body_json = json.encode(testing_data)
 local expected_body_json = json.encode({testing_data['key'], testing_data['value']})
 local test_put_body = json.encode({value = "another_val"})
-local expected_not_found_err = json.encode({error = "The key 'not_existing_key' not found"})
+local exp_invalid_body = json.encode({error = "Invalid body"})
+local function exp_not_found_err(key)
+    return json.encode({error = "The key '"..key.."' not found"})
+end
 
 local function test_cases(tests)
     local cnt_tests = table.getn(tests)
@@ -53,11 +56,30 @@ test:test("POST method", function(test)
             name = "check POST with existing key: ",
             data = {
                 method = "POST",
-                url = URL,
+                url = URL ,
                 body = test_body_json,
                 expected_status = 409,
                 expected_body = json.encode({error = "The key '"..testing_data["key"].."' already exists"})
             }
+        },
+        {
+            name = "check POST 'invalid body' error: ",
+            data = {
+                method = "POST",
+                url = URL,
+                body = "some_body",
+                expected_status = 400,
+                expected_body = exp_invalid_body 
+            }
+        },
+        {
+            name = "check POST 'invalid body' error: ",
+            data = {
+                method = "POST",
+                url = URL,
+                body = json.encode({key = {}}),
+                expected_status = 400,
+                expected_body = exp_invalid_body             }
         }
     }
     test_cases(cases)
@@ -82,7 +104,7 @@ test:test("GET method", function(test)
                 url = URL.."not_existing_key",
                 body = "",
                 expected_status = 404,
-                expected_body = expected_not_found_err
+                expected_body = exp_not_found_err("not_existing_key")
             }
         }
     }
@@ -118,7 +140,17 @@ test:test("PUT method", function(test)
                 url = URL.."not_existing_key",
                 body = test_put_body,
                 expected_status = 404,
-                expected_body = expected_not_found_err
+                expected_body = exp_not_found_err("not_existing_key")
+            }
+        },
+        {
+            name = "check PUT 'invalid body' error: ",
+            data = {
+                method = "PUT",
+                url = URL..testing_data['key'],
+                body = "some_body",
+                expected_status = 400,
+                expected_body = exp_invalid_body
             }
         }
     }
@@ -145,7 +177,17 @@ test:test("DELETE method", function(test)
                 url = URL.."not_existing_key",
                 body = "",
                 expected_status = 404,
-                expected_body = expected_not_found_err
+                expected_body = exp_not_found_err("not_existing_key")
+            }
+        },
+        {
+            name = "check GET 'not found' error: ",
+            data = {
+                method = "GET",
+                url = URL..testing_data['key'],
+                body = "",
+                expected_status = 404,
+                expected_body = exp_not_found_err(testing_data['key'])            
             }
         }
 
