@@ -19,6 +19,17 @@ Path | Method | Body (json) | Description
 /kv/:key | DELETE | | Delete tuple if key was in the database
 /kv/:key | PUT | ```{ "value": some json} ``` | Update new pair if the key was in the database
 
+### You can check the api with the following commands
+```
+curl -d '{"key":"Hello", "value": "World"}' -H "Content-Type: application/json" -X POST http://kv-storage-tarantool.site/kv
+
+curl -X GET http://kv-storage-tarantool.site/kv/Hello
+
+curl -d '{"value": "!"}' -H "Content-Type: application/json" -X PUT http://kv-storage-tarantool.site/kv/Hello
+
+curl -X DELETE http://kv-storage-tarantool.site/kv/Hello
+```
+
 ## 📝 Deployment
 ### Docker
 1. Clone this repository
