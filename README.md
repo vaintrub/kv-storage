@@ -1,6 +1,8 @@
 #  Key-value storage accessible by http
 ##  What is it?
 This is a key-value storage using Tarantool
+## DEMO
+The application is deployed to http://kv-storage-tarantool.site/
 
 ## 📚 Technologies
 This project is powered by Lua.
