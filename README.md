@@ -6,6 +6,10 @@ The application is deployed to http://kv-storage-tarantool.site/
 
 ## 📚 Technologies
 This project is powered by Lua.
+Also used:
+- Nginx
+- Docker
+- Tarantool
 
 ## ✌️ API
 Path | Method | Body (json) | Description
