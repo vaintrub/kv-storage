@@ -15,19 +15,20 @@ Path | Method | Body (json) | Description
 
 ## 📝 Deployment
 ### Docker
+1. Clone this repository
+2. If you have docker-compose installed you can simply run:
 
+```
+cd kv-storage-tarantool
+docker-compose build
+docker-compose up -d
+```
+***Note:** tests will run automatically
 ## ☑️ TODO
-- [ ] ...
-- [x] ... 
-- [ ] ...
-- [ ] ...
+- [ ] Add more tests
+- [x] add dockerfils & nginx 
 
 ## Keywords
   - [Tarantool](https://www.tarantool.io/en/)
   - [Lua](https://www.lua.org)
   - [Docker](https://hub.docker.com/r/ax4docker/ax_tarantool)
-
-
-### Installation
-
-### Application launch
