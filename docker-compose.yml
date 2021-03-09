@@ -1,0 +1,15 @@
+version: "2"
+
+services:
+  kv-storage:
+      build: src
+      container_name: kv
+      ports:
+        - 3301:3301
+        - 8080:8080
+      volumes:
+        - .tarantool-data:/var/lib/tarantool
+  nginx:
+    build: nginx
+    ports:
+      - 80:80
