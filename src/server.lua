@@ -5,119 +5,113 @@ local http_server = require('http.server')
 local json = require('json')
 local log = require('log')
 
+local PORT = os.getenv('PORT')
+if PORT == nil then
+    PORT = 8080
+end
+
 box.cfg{
 	log = './server.log'
 }
 
-box.once('schema', 
+box.once('init', 
 	function()
-		box.schema.create_space('kv-storage',
+		box.schema.space.create('kv',
 			{ 
 				format = {
-					{ name = 'key';   type = 'string' },
-					{ name = 'value'; type = '*' },
+					{ name = 'key',   type = 'string' },
+					{ name = 'value'},
 				};
-				if_not_exists = true;
 			}
 		)
-		box.space.kv_storage:create_index('primary', 
-			{ type = 'hash'; parts = {1, 'string'}; if_not_exists = true; }
+		box.space.kv:create_index('primary', 
+			{ 
+                type = 'hash',
+                parts = {'key'}
+            }
 		)
 	end
 )
 
-local httpd = http_server.new('127.0.0.1', 8080, {
+local httpd = http_server.new('127.0.0.1', PORT, {
     log_requests = true,
     log_errors = true
 })
 local router = http_router.new()
 
-local function generate_response(req, status_code)
-    local resp
-    local msg
-    if status_code == 200 then
-        msg = "OK"
-    elseif status_code == 400 then
-        msg = "Invalid body"
-    elseif status_code == 404 then
-        msg = "This key does not exist"
-    elseif status_code == 409 then
-        msg = "The key already exist"
-    end
-    resp = req:render({json = {response = msg}}) 
-    resp.status = status_code
-    return resp
-end
-
+-- Utils:
 local function decode_body_json(req)
-    print(req)
     local status, body = pcall(function() return req:json() end)
     log.info("REQUEST: %s %s", status, body)
     return body
 end
 
+local function error_resp(req, msg, status_code)
+    local resp = req:render({json = {error = msg}})
+    resp.status = status_code
+    return resp
+end
+
+local function has_tuple(key)
+    local value = box.space.kv:select({key})
+    return (value ~= nil and next(value) ~= nil)
+end
+
+-- Controllers:
 
 local function create_tuple(req)
-    local resp_status_code = 200
-    local body = decode_body_json()
+    local body = decode_body_json(req)
     -- Validating body
-	if ( body ~= nil or body['key'] == nil or body['value'] == nil or type(body) == 'string' ) then
-		resp_status_code = 400
-    else
-        -- Check for existing key
-        local key = body['key']
-	    local tuple_already_exist = box.space.kv_storage:select(key)
-	    if ( table.getn(tuple_already_exist) ~= 0 ) then
-		    resp_status_code = 409
-        else
-            box.space.kv_storage:insert{ key, body['value'] }
-	    end
+	if ( body == nil or body['key'] == nil or body['value'] == nil or type(body) == 'string' ) then
+        return error_resp(req, "Invalid body", 400)
     end
-    return generate_response(req, resp_status_code)
+
+    local key = body['key']
+	if ( has_tuple(key) ) then
+        return error_resp(req, "The key '"..key.."' already exists", 409)
+    else
+        box.space.kv:insert{ key, body['value'] }
+	end
+    return {status = 200, body = "OK"}
 end
 
 local function update_tuple(req)
-    local status_code = 200
-    local body = json.decode(req)
+    local body = decode_body_json(req)
 	local key = req:stash('key')
-
+    
 	if ( type(body) == 'string'  or body['value'] == nil or key == nil ) then
-        status_code = 400
+        return error_resp(req, "Invalid body", 400)
 	end
 
-	local tuple = box.space.kv_storage:select{ key }
-	if( table.getn( tuple ) == 0 ) then
-		status_code = 404
+	if( has_tuple(key)) then
+        box.space.kv:update({key}, {{'=', 2, body['value']}})
+    else
+        return error_resp(req, "The key '"..key.."' not found", 404)
 	end
 
-	local tuple = box.space.kv_store:update({key}, {{'=', 2, body['value']}})
-
-    return generate_response(req, status_code)
+    return {status = 200, body = "OK"}
 end
 
 local function get_tuple(req)
-    local status_code = 200
     local key = req:stash('key')
 
-    local tuple = box.space.kv_storage:select{ key }
-	if( table.getn( tuple ) == 0 ) then
-        status_code = 404
+    local value = box.space.kv:select{ key }
+	if( table.getn( value ) == 0 ) then
+        return error_resp(req, "The key '"..key.."' not found", 404)
 	end
 
-    return generate_response(req, status_code)
+    return {status = 200, body = json.encode(unpack(value))}
 end
 
 local function delete_tuple(req)
-	status_code = 200
     local key = req:stash('key')
 
-	local tuple = box.space.kv_storage:select(key)
-	if( table.getn( tuple ) == 0 ) then
-		status_code = 404
+	if( not has_tuple(key) ) then
+        return error_resp(req, "The key '"..key.."' not found", 404)
 	end
 
-	box.space.kv_store:delete{ key }
-    return generate_response(req, status_code)
+	box.space.kv:delete{ key }
+    return {status = 200, body = "OK"}
 end
 
 
