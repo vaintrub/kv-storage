@@ -13,3 +13,11 @@ services:
     build: nginx
     ports:
       - 80:80
+  test_server:
+    build: t
+    container_name: test_kv
+    links:
+      - kv-storage
+    environment:
+      - HOST=http://kv-storage:8080/
+      

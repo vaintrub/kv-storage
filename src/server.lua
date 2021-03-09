@@ -11,7 +11,7 @@ if PORT == nil then
 end
 
 box.cfg{
-	log = './server.log'
+--	log = './server.log'
 }
 
 box.once('init', 
@@ -33,7 +33,7 @@ box.once('init',
 	end
 )
 
-local httpd = http_server.new('127.0.0.1', PORT, {
+local httpd = http_server.new('0.0.0.0', PORT, {
     log_requests = true,
     log_errors = true
 })
