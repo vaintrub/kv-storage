@@ -11,6 +11,8 @@ Also used:
 - Docker
 - Tarantool
 
+**Known limitations:** https is not supported, because http.client does not support it.
+
 ## ✌️ API
 Path | Method | Body (json) | Description
 --- | --- | --- | --- 
