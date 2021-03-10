@@ -17,7 +17,7 @@ Also used:
 Path | Method | Body (json) | Description
 --- | --- | --- | --- 
 /kv | POST | ```{"key": "Your key", "value": some json } ``` | Add a new tuple in database
-/kv/:key | GET |  | Select tuple by key
+/kv/:key | GET |  | Select value by key
 /kv/:key | DELETE | | Delete tuple if key was in the database
 /kv/:key | PUT | ```{ "value": some json} ``` | Update new pair if the key was in the database
 
