@@ -14,18 +14,18 @@ box.cfg{
     log = './server.log'
 }
 
-box.once('init', 
+box.once('init',
     function()
         box.schema.space.create('kv',
-            { 
+            {
                 format = {
                     { name = 'key',   type = 'string' },
                     { name = 'value'},
                 };
             }
         )
-        box.space.kv:create_index('primary', 
-            { 
+        box.space.kv:create_index('primary',
+            {
                 type = 'hash',
                 parts = {'key'}
             }
@@ -73,7 +73,7 @@ end
 local function update_tuple(req)
     local body = decode_body_json(req)
     local key = req:stash('key')
-    
+
     if ( type(body) == 'string'  or body['value'] == nil or key == nil ) then
         return error_resp(req, "Invalid body", 400)
     end

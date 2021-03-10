@@ -69,7 +69,7 @@ test:test("POST method", function(test)
                 url = URL,
                 body = "some_body",
                 expected_status = 400,
-                expected_body = exp_invalid_body 
+                expected_body = exp_invalid_body
             }
         },
         {
@@ -187,7 +187,7 @@ test:test("DELETE method", function(test)
                 url = URL..testing_data['key'],
                 body = "",
                 expected_status = 404,
-                expected_body = exp_not_found_err(testing_data['key'])            
+                expected_body = exp_not_found_err(testing_data['key'])
             }
         }
 
