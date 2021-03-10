@@ -11,26 +11,26 @@ if PORT == nil then
 end
 
 box.cfg{
-	log = './server.log'
+    log = './server.log'
 }
 
 box.once('init', 
-	function()
-		box.schema.space.create('kv',
-			{ 
-				format = {
-					{ name = 'key',   type = 'string' },
-					{ name = 'value'},
-				};
-			}
-		)
-		box.space.kv:create_index('primary', 
-			{ 
+    function()
+        box.schema.space.create('kv',
+            { 
+                format = {
+                    { name = 'key',   type = 'string' },
+                    { name = 'value'},
+                };
+            }
+        )
+        box.space.kv:create_index('primary', 
+            { 
                 type = 'hash',
                 parts = {'key'}
             }
-		)
-	end
+        )
+    end
 )
 
 local httpd = http_server.new('0.0.0.0', PORT, {
@@ -57,7 +57,7 @@ end
 local function create_tuple(req)
     local body = decode_body_json(req)
     -- Validating body
-	if ( body == nil or body['key'] == nil or body['value'] == nil or type(body) == 'string' ) then
+    if ( body == nil or body['key'] == nil or body['value'] == nil or type(body) == 'string' ) then
         return error_resp(req, "Invalid body", 400)
     end
 
@@ -66,22 +66,22 @@ local function create_tuple(req)
     -- Checking for existing tuple
     if ( not status ) and ( err:unpack().code == box.error.TUPLE_FOUND ) then
         return error_resp(req, "The key '"..key.."' already exists", 409)
-	end
+    end
     return {status = 200, body = "OK"}
 end
 
 local function update_tuple(req)
     local body = decode_body_json(req)
-	local key = req:stash('key')
+    local key = req:stash('key')
     
-	if ( type(body) == 'string'  or body['value'] == nil or key == nil ) then
+    if ( type(body) == 'string'  or body['value'] == nil or key == nil ) then
         return error_resp(req, "Invalid body", 400)
-	end
+    end
 
     local tuple = box.space.kv:update({key}, {{'=', 2, body['value']}})
     if tuple == nil then
         return error_resp(req, "The key '"..key.."' not found", 404)
-	end
+    end
 
     return {status = 200, body = "OK"}
 end
@@ -89,21 +89,21 @@ end
 local function get_tuple(req)
     local key = req:stash('key')
     local tuple = box.space.kv:select{ key }
-	if( table.getn( tuple ) == 0 ) then
+    if( table.getn( tuple ) == 0 ) then
         return error_resp(req, "The key '"..key.."' not found", 404)
-	end
+    end
 
     return {status = 200, body = json.encode(unpack(tuple))}
 end
 
 local function delete_tuple(req)
     local key = req:stash('key')
-	local tuple = box.space.kv:delete{ key }
+    local tuple = box.space.kv:delete{ key }
     -- Storage vinyl engine always returns nil,
     -- but my web app doesn't work with it
-	if( tuple == nil ) then
+    if( tuple == nil ) then
         return error_resp(req, "The key '"..key.."' not found", 404)
-	end
+    end
     return {status = 200, body = "OK"}
 end
 
