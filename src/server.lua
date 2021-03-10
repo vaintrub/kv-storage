@@ -93,7 +93,7 @@ local function get_tuple(req)
         return error_resp(req, "The key '"..key.."' not found", 404)
     end
 
-    return {status = 200, body = json.encode(unpack(tuple))}
+    return {status = 200, body = unpack(tuple)[2]}
 end
 
 local function delete_tuple(req)

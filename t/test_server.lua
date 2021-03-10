@@ -21,7 +21,7 @@ local testing_data = {
     value = "some_value"
 }
 local test_body_json = json.encode(testing_data)
-local expected_body_json = json.encode({testing_data['key'], testing_data['value']})
+local expected_body_json = testing_data['value']
 local test_put_body = json.encode({value = "another_val"})
 local exp_invalid_body = json.encode({error = "Invalid body"})
 local function exp_not_found_err(key)
@@ -130,7 +130,7 @@ test:test("PUT method", function(test)
                 url = URL..testing_data['key'],
                 body = "",
                 expected_status = 200,
-                expected_body = json.encode({testing_data['key'], 'another_val'})
+                expected_body = 'another_val'
             }
         },
         {
